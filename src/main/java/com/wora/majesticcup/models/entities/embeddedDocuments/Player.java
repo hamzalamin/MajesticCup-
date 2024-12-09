@@ -12,5 +12,5 @@ public class Player {
     private String name;
     private String surname;
     private String position;
-    private int number;
+    private Integer number;
 }

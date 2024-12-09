@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Result {
-    private int team1Goals;
-    private int team2Goals;
+    private Integer team1Goals;
+    private Integer team2Goals;
     private List<Statistic> statistics;
 }

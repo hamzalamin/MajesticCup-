@@ -12,8 +12,8 @@ import lombok.Setter;
 @Setter
 public class Statistic {
     private String playerId;
-    private int goals;
-    private int assists;
-    private int yellowCards;
-    private int redCards;
+    private Integer goals;
+    private Integer assists;
+    private Integer yellowCards;
+    private Integer redCards;
 }

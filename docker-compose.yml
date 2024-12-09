@@ -11,17 +11,20 @@ services:
     depends_on:
       - mongodb 
     environment:
-      - SPRING_DATA_MONGODB_HOST=mongodb
-      - SPRING_DATA_MONGODB_PORT=27017
-      - SPRING_DATA_MONGODB_DATABASE=majestic_cup
+      SPRING_DATA_MONGODB_URI: mongodb://user:password@mongodb:27018/mjestic_cup_db?authSource=admin
 
   mongodb:
     image: mongo:latest
     container_name: majestic_cup_db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=password
     ports:
-      - "27017:27017"
+      - "27018:27018"
     volumes:
       - mongodb_data:/data/db
+      - ./mongod.conf:/etc/mongod.conf:ro
+    command: [ "mongod", "--config", "/etc/mongod.conf" ]
 
 volumes:
   mongodb_data:

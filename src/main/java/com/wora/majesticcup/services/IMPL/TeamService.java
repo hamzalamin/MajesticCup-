@@ -60,4 +60,10 @@ public class TeamService implements ITeamService {
                 .orElseThrow(() -> new EntityNotFoundException("Team", id));
         teamRepository.delete(team);
     }
+
+    @Override
+    public Team getTeamEntityById(String id){
+        return teamRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Team", id));
+    }
 }

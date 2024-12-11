@@ -20,5 +20,4 @@ public class Match {
     private String team1;
     private String team2;
     private Result result;
-    private String winner;
 }

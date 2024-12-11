@@ -1,5 +1,6 @@
 package com.wora.majesticcup.models.DTOs.match;
 
+import com.wora.majesticcup.models.DTOs.result.EmbeddedResultDto;
 import jakarta.validation.constraints.NotNull;
 
 public record MatchDto(
@@ -7,6 +8,6 @@ public record MatchDto(
         @NotNull Integer round,
         @NotNull String team1,
         @NotNull String team2,
-        @NotNull ResultDto result
+        @NotNull EmbeddedResultDto result
 ) {
 }

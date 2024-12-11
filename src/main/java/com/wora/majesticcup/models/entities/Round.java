@@ -1,6 +1,5 @@
 package com.wora.majesticcup.models.entities;
 
-import com.wora.majesticcup.models.entities.embeddedDocuments.MatchDetail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,5 +20,5 @@ public class Round {
     private String id;
     private int roundNumber;
     private String competitionId;
-    private List<MatchDetail> matches;
+    private List<Match> matches;
 }

@@ -31,9 +31,8 @@ public class MatchService implements IMatchService {
         Match match = matchMapper.toEntity(createMatchDto);
         match.setTeam1(team1.getId());
         match.setTeam2(team2.getId());
-
+        match.setRound(createMatchDto.round());
         Match savedMatch = matchRepository.save(match);
-
         return matchMapper.toDto(savedMatch);
     }
 

@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Match {
     @Id
     private String id;
-    private int round;
+    private Integer round;
     private String team1;
     private String team2;
     private Result result;

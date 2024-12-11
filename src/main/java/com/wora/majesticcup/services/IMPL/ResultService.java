@@ -67,4 +67,10 @@ public class ResultService implements IResultService {
                 .orElseThrow(() -> new EntityNotFoundException("Result", id));
         resultRepository.delete(result);
     }
+
+    @Override
+    public Result findEntityById(String id){
+        return resultRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Result", id));
+    }
 }

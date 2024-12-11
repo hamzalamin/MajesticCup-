@@ -1,6 +1,7 @@
 package com.wora.majesticcup.models.entities.embeddedDocuments;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 
 
 @NoArgsConstructor
@@ -8,6 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 public class Player {
+    @Id
     private String id;
     private String name;
     private String surname;

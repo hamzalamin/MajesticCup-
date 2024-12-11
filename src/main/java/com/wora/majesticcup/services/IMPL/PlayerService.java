@@ -62,4 +62,10 @@ public class PlayerService implements IPlayerService {
                 .orElseThrow(() -> new EntityNotFoundException("Player", id));
         playerRepository.delete(player);
     }
+
+    @Override
+    public Player findEntityById(String id){
+        return playerRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Player", id));
+    }
 }

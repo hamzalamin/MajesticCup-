@@ -8,7 +8,6 @@ import java.util.List;
 public record RoundDto(
         @NotNull String id,
         @NotNull @Positive Integer roundNumber,
-        @NotNull String competitionId,
-        @NotNull List<String> matches
+        @NotNull String competitionId
 ) {
 }

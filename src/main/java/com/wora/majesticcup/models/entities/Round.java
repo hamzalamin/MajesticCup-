@@ -19,7 +19,6 @@ import java.util.List;
 public class Round {
     @Id
     private String id;
-
     private int roundNumber;
     private String competitionId;
     private List<MatchDetail> matches;

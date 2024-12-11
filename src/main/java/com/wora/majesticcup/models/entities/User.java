@@ -1,5 +1,6 @@
 package com.wora.majesticcup.models.entities;
 
+import com.wora.majesticcup.models.enumes.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,5 +20,5 @@ public class User {
 
     private String username;
     private String password;
-    private String roles;
+    private Role roles;
 }

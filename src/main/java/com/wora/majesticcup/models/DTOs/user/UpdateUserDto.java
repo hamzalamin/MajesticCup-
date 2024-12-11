@@ -1,10 +1,11 @@
 package com.wora.majesticcup.models.DTOs.user;
 
-import java.util.List;
+import com.wora.majesticcup.models.enumes.Role;
+import jakarta.validation.constraints.NotNull;
 
 public record UpdateUserDto(
         String username,
         String password,
-        List<String> roles
+        @NotNull Role roles
 ) {
 }

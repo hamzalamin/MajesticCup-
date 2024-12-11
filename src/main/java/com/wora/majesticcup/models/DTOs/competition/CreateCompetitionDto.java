@@ -8,8 +8,6 @@ import java.util.List;
 public record CreateCompetitionDto(
         @NotNull String name,
         @NotNull @Positive Integer numberOfTeams,
-        @NotNull List<String> teams,
-        @NotNull Integer currentRound,
-        @NotNull List<String> rounds
+        @NotNull Integer currentRound
 ) {
 }

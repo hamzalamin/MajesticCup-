@@ -9,7 +9,6 @@ public record CompetitionDto(
         @NotNull String id,
         @NotNull String name,
         @NotNull @Positive Integer numberOfTeams,
-        @NotNull List<String> teams,
         @NotNull Integer currentRound,
         @NotNull List<String> rounds
 ) {

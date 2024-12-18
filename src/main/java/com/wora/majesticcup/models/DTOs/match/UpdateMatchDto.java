@@ -1,10 +1,11 @@
 package com.wora.majesticcup.models.DTOs.match;
 
-import jakarta.validation.constraints.NotNull;
+import com.wora.majesticcup.models.DTOs.result.ResultDto;
 
 public record UpdateMatchDto(
-        @NotNull Integer round,
-        @NotNull String team1,
-        @NotNull String team2
-) {
-}
+        int round,
+        String team1,
+        String team2,
+        ResultDto result,
+        String winner
+) {}

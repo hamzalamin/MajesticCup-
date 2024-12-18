@@ -1,14 +1,9 @@
 package com.wora.majesticcup.models.DTOs.player;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-
 public record PlayerDto(
-        @NotNull String id,
-        @NotBlank String name,
-        @NotBlank String surname,
-        @NotBlank String position,
-        @NotNull @Positive Integer number
-) {
-}
+        String id,
+        String name,
+        String surname,
+        String position,
+        int number
+) {}

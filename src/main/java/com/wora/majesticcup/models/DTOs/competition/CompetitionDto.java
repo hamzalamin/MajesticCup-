@@ -1,15 +1,12 @@
 package com.wora.majesticcup.models.DTOs.competition;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-
 import java.util.List;
 
 public record CompetitionDto(
-        @NotNull String id,
-        @NotNull String name,
-        @NotNull @Positive Integer numberOfTeams,
-        @NotNull Integer currentRound,
-        @NotNull List<String> rounds
-) {
-}
+        String id,
+        String name,
+        int numberOfTeams,
+        List<String> teams,
+        int currentRound,
+        List<String> rounds
+) {}

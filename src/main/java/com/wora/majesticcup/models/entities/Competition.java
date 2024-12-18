@@ -14,12 +14,13 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@Document(collection = "competitions", collation = "{ 'locale': 'simple' }")
+@Document(collection = "competitions")
 public class Competition {
     @Id
     private String id;
     private String name;
     private int numberOfTeams;
+    private List<String> teams;
     private int currentRound;
     private List<String> rounds;
 }

@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @Getter
 @Setter
-@Document(collection = "matches", collation = "{ 'locale': 'simple' }")
+@Document(collection = "matches")
 public class Match {
     @Id
     private String id;
@@ -20,4 +20,5 @@ public class Match {
     private String team1;
     private String team2;
     private Result result;
+    private String winner;
 }

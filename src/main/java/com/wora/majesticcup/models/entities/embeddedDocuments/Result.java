@@ -14,10 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Result {
-    @Id
-    private String id;
     private Integer team1Goals;
     private Integer team2Goals;
-    private Match matchId;
     private List<Statistic> statistics;
 }

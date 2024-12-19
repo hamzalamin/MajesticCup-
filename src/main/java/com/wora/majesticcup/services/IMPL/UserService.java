@@ -76,7 +76,7 @@ public class UserService implements IUserService {
 
     @Override
     public void changePassword(ChangePasswordDto changePasswordDto, String name) {
-        User user = userRepository.findByName(name)
+        User user = userRepository.findByUsername(name)
                 .orElseThrow(() -> new EntityNotFoundException("User", name));
 
 

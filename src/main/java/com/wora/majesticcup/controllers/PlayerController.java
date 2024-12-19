@@ -18,10 +18,10 @@ import java.util.List;
 public class PlayerController {
     private final IPlayerService playerService;
 
-    @PostMapping("/players")
-    public ResponseEntity<PlayerDto> create(@RequestBody @Valid CreatePlayerDto createPlayerDto) {
-        return new ResponseEntity<>(playerService.save(createPlayerDto), HttpStatus.CREATED);
-    }
+//    @PostMapping("/players")
+//    public ResponseEntity<PlayerDto> create(@RequestBody @Valid CreatePlayerDto createPlayerDto) {
+//        return new ResponseEntity<>(playerService.save(createPlayerDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/players")
     public ResponseEntity<List<PlayerDto>> findAll(

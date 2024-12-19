@@ -18,10 +18,10 @@ import java.util.List;
 public class ResultController {
     private final IResultService resultService;
 
-    @PostMapping("/results")
-    public ResponseEntity<ResultDto> create(@RequestBody @Valid CreateResultDto createResultDto) {
-        return new ResponseEntity<>(resultService.save(createResultDto), HttpStatus.CREATED);
-    }
+//    @PostMapping("/results")
+//    public ResponseEntity<ResultDto> create(@RequestBody @Valid CreateResultDto createResultDto) {
+//        return new ResponseEntity<>(resultService.save(createResultDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/results")
     public ResponseEntity<List<ResultDto>> findAll(
@@ -31,23 +31,23 @@ public class ResultController {
         List<ResultDto> results = resultService.findAll(pageNumber, size);
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
-
-    @GetMapping("/results/{id}")
-    public ResponseEntity<ResultDto> findById(@PathVariable String id) {
-        return new ResponseEntity<>(resultService.findById(id), HttpStatus.OK);
-    }
-
-    @PutMapping("/results/{id}")
-    public ResponseEntity<ResultDto> update(
-            @RequestBody @Valid UpdateResultDto updateResultDto,
-            @PathVariable String id
-    ) {
-        return new ResponseEntity<>(resultService.update(updateResultDto, id), HttpStatus.OK);
-    }
-
-    @DeleteMapping("/results/{id}")
-    public ResponseEntity<String> delete(@PathVariable String id) {
-        resultService.delete(id);
-        return new ResponseEntity<>("RESULT WITH ID: " + id + " DELETED SUCCESSFULLY !!", HttpStatus.OK);
-    }
+//
+//    @GetMapping("/results/{id}")
+//    public ResponseEntity<ResultDto> findById(@PathVariable String id) {
+//        return new ResponseEntity<>(resultService.findById(id), HttpStatus.OK);
+//    }
+//
+//    @PutMapping("/results/{id}")
+//    public ResponseEntity<ResultDto> update(
+//            @RequestBody @Valid UpdateResultDto updateResultDto,
+//            @PathVariable String id
+//    ) {
+//        return new ResponseEntity<>(resultService.update(updateResultDto, id), HttpStatus.OK);
+//    }
+//
+//    @DeleteMapping("/results/{id}")
+//    public ResponseEntity<String> delete(@PathVariable String id) {
+//        resultService.delete(id);
+//        return new ResponseEntity<>("RESULT WITH ID: " + id + " DELETED SUCCESSFULLY !!", HttpStatus.OK);
+//    }
 }

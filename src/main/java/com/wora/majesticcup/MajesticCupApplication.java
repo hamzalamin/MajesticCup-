@@ -11,27 +11,27 @@ public class MajesticCupApplication {
     }
 
 
-//    @Bean
-//    @Order(1)
-//    CommandLineRunner save(TeamRepository teamRepository) {
-//        return args -> {
-//            List<Team> existingTeams = teamRepository.findByName("hamza");
-//            if (existingTeams.isEmpty()) {
-//                Team team = new Team("hamza AZZAs");
-//                teamRepository.save(team);
-//            }
-//        };
-//    }
-//
-//    @Bean
-//    @Order(2)
-//    CommandLineRunner findAll(TeamRepository teamRepository){
-//        return args -> {
-//            teamRepository.findAll()
-//                    .forEach(System.out::println);
-//        };
-//
-//    }
+    //    @Bean
+    //    @Order(1)
+    //    CommandLineRunner save(TeamRepository teamRepository) {
+    //        return args -> {
+    //            List<Team> existingTeams = teamRepository.findByName("hamza");
+    //            if (existingTeams.isEmpty()) {
+    //                Team team = new Team("hamza AZZAs");
+    //                teamRepository.save(team);
+    //            }
+    //        };
+    //    }
+    //
+    //    @Bean
+    //    @Order(2)
+    //    CommandLineRunner findAll(TeamRepository teamRepository){
+    //        return args -> {
+    //            teamRepository.findAll()
+    //                    .forEach(System.out::println);
+    //        };
+    //
+    //    }
 
 
 }

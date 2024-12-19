@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/")
 @RequiredArgsConstructor
 public class CompetitionController {
     private final ICompetitionService competitionService;
 
-    @PostMapping("/competitions")
-    public ResponseEntity<CompetitionDto> create(@RequestBody @Valid CreateCompetitionDto createCompetitionDto) {
-        return new ResponseEntity<>(competitionService.save(createCompetitionDto), HttpStatus.CREATED);
-    }
+//    @PostMapping("/competitions")
+//    public ResponseEntity<CompetitionDto> create(@RequestBody @Valid CreateCompetitionDto createCompetitionDto) {
+//        return new ResponseEntity<>(competitionService.save(createCompetitionDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/competitions")
     public ResponseEntity<List<CompetitionDto>> findAll(
@@ -37,17 +37,17 @@ public class CompetitionController {
         return new ResponseEntity<>(competitionService.findById(id), HttpStatus.OK);
     }
 
-    @PutMapping("/competitions/{id}")
-    public ResponseEntity<CompetitionDto> update(
-            @RequestBody @Valid UpdateCompetitionDto updateCompetitionDto,
-            @PathVariable String id
-    ) {
-        return new ResponseEntity<>(competitionService.update(updateCompetitionDto, id), HttpStatus.OK);
-    }
-
-    @DeleteMapping("/competitions/{id}")
-    public ResponseEntity<String> delete(@PathVariable String id) {
-        competitionService.delete(id);
-        return new ResponseEntity<>("COMPETITION WITH ID: " + id + " DELETED SUCCESSFULLY !!", HttpStatus.OK);
-    }
+//    @PutMapping("/competitions/{id}")
+//    public ResponseEntity<CompetitionDto> update(
+//            @RequestBody @Valid UpdateCompetitionDto updateCompetitionDto,
+//            @PathVariable String id
+//    ) {
+//        return new ResponseEntity<>(competitionService.update(updateCompetitionDto, id), HttpStatus.OK);
+//    }
+//
+//    @DeleteMapping("/competitions/{id}")
+//    public ResponseEntity<String> delete(@PathVariable String id) {
+//        competitionService.delete(id);
+//        return new ResponseEntity<>("COMPETITION WITH ID: " + id + " DELETED SUCCESSFULLY !!", HttpStatus.OK);
+//    }
 }

@@ -26,9 +26,9 @@ public class ResultService implements IResultService {
 
     @Override
     public ResultDto save(CreateResultDto createResultDto) {
-        Match match = matchService.getMatchEntityById(createResultDto.matchId());
+//        Match match = matchService.getMatchEntityById(createResultDto.matchId());
         Result result = resultMapper.toEntity(createResultDto);
-        result.setMatchId(match);
+//        result.(match);
         Result savedResult = resultRepository.save(result);
         return resultMapper.toDto(savedResult);
     }
@@ -44,11 +44,11 @@ public class ResultService implements IResultService {
     public ResultDto update(UpdateResultDto updateResultDto, String id) {
         Result result = resultRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Result", id));
-        Match match = matchService.getMatchEntityById(updateResultDto.matchId());
+//        Match match = matchService.getMatchEntityById(updateResultDto.matchId());
 
         result.setTeam1Goals(updateResultDto.scoreTeam1());
         result.setTeam2Goals(updateResultDto.scoreTeam2());
-        result.setMatchId(match);
+//        result.setMatchId(match);
 
         Result updatedResult = resultRepository.save(result);
         return resultMapper.toDto(updatedResult);    }

@@ -15,4 +15,8 @@ public class Player {
     private String surname;
     private String position;
     private Integer number;
+
+    public Player(String playerId) {
+        this.id = playerId;
+    }
 }

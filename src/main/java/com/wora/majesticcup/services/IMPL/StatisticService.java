@@ -32,9 +32,7 @@ public class StatisticService implements IStatisticService {
     @Override
     public StatisticDto save(CreateStatisticDto createStatisticDto) {
         Statistic statistic = statisticMapper.toEntity(createStatisticDto);
-        Result result = resultService.findEntityById(createStatisticDto.result());
         Player player = playerService.findEntityById(createStatisticDto.playerId());
-        statistic.setResult(result);
         statistic.setPlayerId(player);
         Statistic savedStatistic = statisticRepository.save(statistic);
         return statisticMapper.toDto(savedStatistic);
@@ -52,14 +50,13 @@ public class StatisticService implements IStatisticService {
         Statistic statistic = statisticRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Statistic", id));
 
-        Result result = resultService.findEntityById(updateStatisticDto.result());
         Player player = playerService.findEntityById(updateStatisticDto.playerId());
 
         statistic.setGoals(updateStatisticDto.goals());
         statistic.setAssists(updateStatisticDto.assists());
         statistic.setYellowCards(updateStatisticDto.yellowCards());
         statistic.setRedCards(updateStatisticDto.redCards());
-        statistic.setResult(result);
+
         statistic.setPlayerId(player);
 
         Statistic updatedStatistic = statisticRepository.save(statistic);
